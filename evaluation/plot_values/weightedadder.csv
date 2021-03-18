@@ -1,0 +1,11 @@
+input size; n_qb Qiskit without regression bug; n_gates Qiskit without regression bug; n_cx_gates Qiskit without regression bug;  n_qb Unqomp; n_gates Unqomp ; n_cx_gates Uncomp; n_qb Qiskit with regression bug; n_gates Qiskit with regression bug ; n_cx_gates Qiskit with regression bug; n_qb Unqomp alt. impl.; n_gates Unqomp alt. impl.; n_cx_gates Unqomp alt. impl.
+3 ; 9 ; 374 ; 140 ; 9 ; 312 ; 110 ; 9 ; 434 ; 188 ; 9 ; 294 ; 104
+6 ; 16 ; 1725 ; 633 ; 16 ; 1455 ; 507 ; 16 ; 2085 ; 921 ; 18 ; 1239 ; 435
+9 ; 19 ; 2604 ; 956 ; 19 ; 2192 ; 764 ; 19 ; 3144 ; 1388 ; 21 ; 1868 ; 656
+12 ; 24 ; 4446 ; 1626 ; 24 ; 3738 ; 1302 ; 24 ; 5406 ; 2394 ; 27 ; 3090 ; 1086
+15 ; 27 ; 5588 ; 2045 ; 27 ; 4704 ; 1637 ; 27 ; 6788 ; 3005 ; 30 ; 3930 ; 1379
+18 ; 32 ; 8210 ; 2998 ; 32 ; 6890 ; 2398 ; 32 ; 10010 ; 4438 ; 36 ; 5630 ; 1978
+21 ; 35 ; 9554 ; 3488 ; 35 ; 8022 ; 2792 ; 35 ; 11654 ; 5168 ; 39 ; 6546 ; 2300
+24 ; 38 ; 10964 ; 4004 ; 38 ; 9192 ; 3200 ; 38 ; 13364 ; 5924 ; 42 ; 7500 ; 2636
+27 ; 41 ; 12308 ; 4494 ; 41 ; 10324 ; 3594 ; 41 ; 15008 ; 6654 ; 45 ; 8416 ; 2958
+30 ; 46 ; 16189 ; 5903 ; 46 ; 13567 ; 4721 ; 46 ; 19789 ; 8783 ; 51 ; 10939 ; 3845
