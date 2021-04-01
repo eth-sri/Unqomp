@@ -1,0 +1,12 @@
+*.dyn_hi
+*.o
+*.dyn_o
+*.hi
+*no_opt.hs
+addermult
+dj
+grover
+integercomp
+mcx
+weightedAdder4
+

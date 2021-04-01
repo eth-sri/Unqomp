@@ -45,7 +45,6 @@ def GroverQiskit(oracle):
     qc.h(_oracle.output_register)
     qc += _qc_amplitude_amplification
     return qc
-
 #with unqomp
 def GroverQpp(n, oracle):
     _num_iterations = int(np.floor(np.pi / 4.0 * np.sqrt(pow(2, n))))

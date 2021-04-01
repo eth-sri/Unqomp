@@ -12,7 +12,6 @@ def makesCircMult(num_qubits):
         circuit.append(makesCirqAdder(num_qubits).to_gate(), [*a[:], *b[:], *anc[:]])
         for a_qubit, y_qubit in zip(a[i:], y[:n-i]):
             circuit.ccx(x_i, y_qubit, a_qubit)
-
 #with unqomp
 def makesMultCirc(num_qubits):
     b = QuantumRegister(num_qubits)

@@ -12,7 +12,6 @@ def makesDJ(num_qubits):
     qc_postoracle.h(self._oracle.variable_register)
     qc_postoracle.barrier()
     self._circuit = qc_preoracle + qc_oracle + qc_postoracle
-
 #with unqomp
 def makesDJ():
 		var_reg = QuantumRegister(num_qubits, name = 'vals')
@@ -26,5 +25,3 @@ def makesDJ():
     circ.h(var_reg)
 		circ.barrier()
     return (circ, var_reg)
-
-

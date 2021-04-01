@@ -69,7 +69,6 @@ def WA():
                         self.x(qr_sum[j])
                         self.mct([q_state, qr_sum[j], qr_carry[j - 1]], qr_carry[j], qr_control)
                         self.x(qr_sum[j])
-
 # with unqomp
 def makeWeightedAdder(num_state_qubits, weights):
     num_sum_qubits = int(np.floor(np.log2(sum(weights))) + 1) if sum(weights) > 0 else 1 

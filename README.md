@@ -30,6 +30,11 @@ Note that Unqomp was developed for Qiskit 0.22.0, and may not work with later
 
 ## Start Programming
 
+In the following, we provide some examples using Unqomp. As Unqomp extends
+Qiskit, we refer to the [Qiskit
+tutorials](https://qiskit.org/documentation/tutorials/circuits/1_getting_started_with_qiskit.html)
+for a more thorough introduction into building circuits and using custom gates.
+
 The following code snippet creates a simple adder circuit:
 
 ```python
@@ -137,10 +142,10 @@ print(circ2)
 #           └───────┘     └───────┘     └───────┘     └───────┘
 ```
 
-## Step-by-Step Instuctions to Reproduce Evaluation
+## Step-by-Step Instructions to Reproduce Evaluation
 
 In the following, we describe how to reproduce the evaluation results from
-PLDI'21 paper "Unqomp: Synthesizing Uncomputation in Quantum Circuits".
+PLDI'21 paper, "Unqomp: Synthesizing Uncomputation in Quantum Circuits".
 
 ### Organization
 
@@ -156,21 +161,25 @@ can be found in [unqomp/examples/](unqomp/examples/).
 ### Paper Claims
 
 #### Q1: Code length
-
+Running [run_code_comp.py](run_code_comp.py) outputs the number of lines as shown in Table 1 of our publication.
 Links to the original Qiskit and Cirq implementations of all the examples can be
-found in [evaluation/code_complexity](code_complexity). Each file also contains the
-relevant parts of the Unqomp and original implementations, which we used to manually
- count the number of lines in each implementation.
+found in [evluation/code_complexity/](evluation/code_complexity/). Each file also contains the
+relevant parts of the Unqomp and original implementations, which are used in [run_code_comp.py](run_code_comp.py).
 
 #### Q2: Efficiency
 
 Running [run_evaluation.py](run_evaluation.py) outputs the relative numbers of
-qubits and gates as shown in Table 2 of our publication. To output the absolute
+qubits and gates when comparing Qiskit and Unqomp, as shown in Table 2 of our publication. To output the absolute
 values of qubits and gates as shown in Table 4 in the appendix, pass the argument
 `--absolute`.
 
 Running [plots.py](plots.py) creates the csv files used to generate the plots in
-Fig.9, in [evaluation/plot_values/](plot_values/). As this requires a long run, by default
+Fig.9, in [evaluation/plot_values/](evaluation/plot_values/). As this requires a long run, by default
 only a few values are computed. To compute all values, pass the argument
-`--all`. The csv files already present in [evaluation/plot_values/](plot_values/) contain
+`--all`. The csv files already present in [evaluation/plot_values/](evaluation/plot_values/) contain
 all expected values.
+
+For the comparison to Quipper, we were not able to automate it fully. The examples are implemented in Quipper in [evaluation/quipper_examples/](evaluation/quipper_examples), and can be compiled and run using [Quipper](https://www.mathstat.dal.ca/~selinger/quipper/). To get the numbers shown in Table 5, we use the conversion from Quipper to Qiskit gate shown by running [evaluation/quipper_examples/conversion_values.py](evaluation/quipper_examples/conversion_values.py).
+Running [run_quipper_evaluation.py](run_quipper_evaluation.py) then outputs the absolute numbers of qubits and gates for the same examples, this time using Unqomp, as shown in Table 5 in the appendix.
+
+

@@ -30,7 +30,6 @@ def makesCirqAdder(num_qubits):
         circuit.append(uncarry(), [c[i], a[i], b[i], c[i+1]])
         circuit.append(carry_sum(), [c[i], a[i], b[i]])
     return circuit
-
 # with unqomp
 def makesAdderCircuit(num_qubits):
    def neg_mct_gate():

@@ -44,7 +44,6 @@ def IntegerComparator():
         else:
             if not self._geq:  # otherwise the condition is never satisfied
                 self.x(q_compare)
-
 # with uncomp
 def makeIntegerComparator(num_state_qubits, value, geq  = True, with_uncomp = True):
     or_gate = OR(2).to_gate()

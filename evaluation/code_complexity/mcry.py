@@ -6,10 +6,8 @@ def mcry(self, theta, q_controls, q_target, q_ancillae, mode='basic', use_basis_
     self.mct(q_controls, q_target, q_ancillae)
     self.u3(-theta / 2, 0, 0, q_target)
     self.mct(q_controls, q_target, q_ancillae)
-
 #mcry with uncomp
 def mcry():
 		circuit.mcx(q_controls[:], q_ancilla)
     circuit.cry(theta, q_ancilla, q_target)
 		return circuit.circuitWithUncomputation()
- 

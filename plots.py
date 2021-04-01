@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser(description='Computes the values used to plot the graphs in Fig. 9, and saves them in plot_values/')
+parser = argparse.ArgumentParser(description='Computes the values used to plot the graphs in Fig. 9, and saves them in evaluation/plot_values/')
 parser.add_argument('--all', dest='all_values', action='store_true',
                     help='computes complete values (default: compute only the first few ones for a faster run)')
 parser.set_defaults(all_values=False)

@@ -31,7 +31,7 @@ def PLR():
                 comp = IntegerComparator(num_state_qubits=self.num_state_qubits, value=point)
                 qr = qr_state[:] + [qr_ancilla[i_compare]]  # add ancilla as compare qubit
                 qr_remaining_ancilla = qr_ancilla[i_compare + 1:]  # take remaining ancillas
-
+                
                 self.append(comp.to_gate(),
                             qr[:] + qr_remaining_ancilla[:comp.num_ancillas])
                 lin_r = LinearPauliRotations(num_state_qubits=self.num_state_qubits,
@@ -42,7 +42,6 @@ def PLR():
                             [qr_ancilla[i_compare]] + qr_state[:] + qr_target)
                 self.append(comp.to_gate().inverse(),
                             qr[:] + qr_remaining_ancilla[:comp.num_ancillas])
-
 # with unqomp
 def contains_zero_breakpoint(self) -> bool:
         return np.isclose(0, self.breakpoints[0])
