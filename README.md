@@ -1,3 +1,5 @@
+**This is a snapshot of Unqomp, providing the artifact for the PLDI'21 paper #83. For the latest version of Unqomp, refer to https://github.com/eth-sri/Unqomp.**
+
 # Unqomp
 
 Unqomp is a procedure to automatically synthesize uncomputation in a given
